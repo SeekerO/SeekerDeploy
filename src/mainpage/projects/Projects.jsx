@@ -22,7 +22,7 @@ const Projects = () => {
       title: "-Send-Here (Web-App)",
       subtitle: "#CSS #HTML #JAVASCRIPT #NODE.JS #REACT #SUPABASE",
       src: Send_here,
-      href: "#",
+      href: "https://seekero.github.io/Send_Here/",
       discrp: "A mock up Messenger",
     },
     {
