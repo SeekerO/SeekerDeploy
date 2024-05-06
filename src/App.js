@@ -4,6 +4,8 @@ import WaveAnimation from "./lottie/Wave";
 import Mainpage from "./mainpage/Mainpage";
 import React, { useEffect, useRef, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 function App() {
   const [isSticky, setSticky] = useState(false);
   const navbarRef = useRef(null); // Use useRef to reference the navbar element
@@ -45,6 +47,7 @@ function App() {
       </nav>
       <main className="pt-40 z-10">
         <Analytics />
+        <SpeedInsights />
         <Mainpage />
       </main>
       <div className=" w-full justify-start flex rotate-180">
