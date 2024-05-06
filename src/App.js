@@ -3,7 +3,7 @@ import Corner from "./lottie/CornerLottie";
 import WaveAnimation from "./lottie/Wave";
 import Mainpage from "./mainpage/Mainpage";
 import React, { useEffect, useRef, useState } from "react";
-
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   const [isSticky, setSticky] = useState(false);
   const navbarRef = useRef(null); // Use useRef to reference the navbar element
@@ -44,6 +44,7 @@ function App() {
         <TopHeader />
       </nav>
       <main className="pt-40 z-10">
+        <Analytics />
         <Mainpage />
       </main>
       <div className=" w-full justify-start flex rotate-180">
