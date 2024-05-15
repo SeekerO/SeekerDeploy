@@ -58,7 +58,9 @@ const Projects = () => {
 
   return (
     <div className="w-fit  textColor lg:px-40 px-10 grid gap-y-5  ">
-      <label className="font-bold text-[25px]">PROJECTS</label>
+      <label className="font-bold text-[25px] flex gap-1">
+        PROJECTS <span className="bg-slate-700 items-center justify-center flex px-2 rounded-md ">{projects_meta_data.length}</span>
+      </label>
 
       {projects_meta_data.map((projects_data, index) => (
         <motion.div
