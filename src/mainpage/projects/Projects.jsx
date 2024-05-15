@@ -3,6 +3,7 @@ import iMonitor from "../images/iMonitor.png";
 import Send_here from "../images/Send_here.png";
 import Akira from "../images/Akira.png";
 import Seekerdev from "../images/SEEKERDEV.png";
+import Todo from "../images/Todo.png";
 import { motion, AnimatePresence } from "framer-motion";
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -20,7 +21,7 @@ const Projects = () => {
     {
       id: 2,
       title: "-Send-Here (Web-App)",
-      subtitle: "#CSS #HTML #JAVASCRIPT #NODE.JS #REACT #SUPABASE",
+      subtitle: "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT",
       src: Send_here,
       href: "https://seekero.github.io/Send_Here/",
       discrp: "A mock up Messenger",
@@ -28,7 +29,7 @@ const Projects = () => {
     {
       id: 3,
       title: "-SEEKERDEV (Website)",
-      subtitle: "#CSS #HTML #JAVASCRIPT #NODE.JS #REACT",
+      subtitle: "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT",
       src: Seekerdev,
       href: "#",
       discrp: "My personal portoflio where it shows my previous projects",
@@ -40,6 +41,14 @@ const Projects = () => {
       src: Akira,
       href: "https://akiramovingsystems.com/",
       discrp: "A showcase website for Akira Moving System",
+    },
+    {
+      id: 5,
+      title: "-TODO (Web-App)",
+      subtitle: "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT",
+      src: Todo,
+      href: "https://to-do-list-ten-theta.vercel.app/",
+      discrp: "To-Do and Scheduler Application",
     },
   ];
 

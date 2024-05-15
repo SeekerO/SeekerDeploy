@@ -10,11 +10,13 @@ const Skills = () => {
     { id:6,type: "HTML5" },
     { id:7,type: "REACTJS" },
     { id:8,type: "NODE.JS" },
-    { id:9,type: "SVELTE" },
-    { id:10,type: "TAILWIND CSS" },
-    { id:11,type: "FIGMA" },
-    { id:12,type: "WORDPRESS" },
-    { id:13,type: "SUPABASE" },
+    { id:9,type: "NEXTJS" },
+    { id:10,type: "SVELTE" },
+    { id:11,type: "TAILWIND CSS" },
+    { id:12,type: "FIGMA" },
+    { id:13,type: "WORDPRESS" },
+    { id:14,type: "SUPABASE" },
+    
   ];
 
   return (
