@@ -8,7 +8,7 @@ import ContactMe from "./contact/ContactMe";
 const Mainpage = () => {
   return (
     <div className="overflow-x-auto overflow-y-hidden w-screen mb-56 flex flex-col">
-      <div className="">
+      <div className="pt-20">
         <Backgroundinfo />
       </div>
       <div id="tech-stacks">

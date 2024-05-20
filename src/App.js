@@ -37,17 +37,18 @@ function App() {
         <Corner />
       </div>
 
-      <nav
-        ref={navbarRef}
-        className={` fixed top-0 w-screen z-10 ${
-          isSticky
-            ? " bg-[#192224] duration-500"
-            : "bg-[#19222400] duration-500"
-        } `}
-      >
-        <TopHeader />
-      </nav>
-      <main className="pt-40 z-10">
+      <main className=" z-10 relative">
+        <div className="w-full h-full  absolute" />
+        <nav
+          ref={navbarRef}
+          className={` fixed top-0 w-screen z-10  ${
+            isSticky
+              ? " bg-[#192224] duration-500"
+              : "bg-[#19222400] duration-500"
+          } `}
+        >
+          <TopHeader />
+        </nav>
         <Analytics />
         <SpeedInsights />
         <Mainpage />

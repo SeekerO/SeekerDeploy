@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 /* Main Color CSS */
+
 .maincolor {
   @apply bg-[#0C1618];
 }
