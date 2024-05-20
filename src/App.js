@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className=" maincolor overflow-y-auto overflow-x-hidden">
+    <div className="maincolor overflow-y-auto overflow-x-hidden">
       <div id="home" className=" w-full justify-start flex">
         <Corner />
       </div>
@@ -40,7 +40,9 @@ function App() {
       <nav
         ref={navbarRef}
         className={` fixed top-0 w-screen z-10 ${
-          isSticky ? " bg-[#192224] duration-300" : ""
+          isSticky
+            ? " bg-[#192224] duration-500"
+            : "bg-[#19222400] duration-500"
         } `}
       >
         <TopHeader />
@@ -50,6 +52,7 @@ function App() {
         <SpeedInsights />
         <Mainpage />
       </main>
+
       <div className=" w-full justify-start flex rotate-180">
         <Corner />
       </div>

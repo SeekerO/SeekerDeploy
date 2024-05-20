@@ -14,7 +14,6 @@ const Mainpage = () => {
       <div id="tech-stacks">
         <Skills />
       </div>
-
       <div id="projects" className="mt-20" />
       <div className=" w-full">
         <Projects />

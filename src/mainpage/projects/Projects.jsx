@@ -79,19 +79,19 @@ const Projects = () => {
             },
           }}
           viewport={{ once: true }}
-          className="flex flex-wrap items-center gap-3 text-[25px] "
+          className="flex flex-wrap items-center gap-3 text-[25px]  "
         >
           <img
             src={projects_data.src}
             alt={projects_data.title}
             onClick={() => openLink(projects_data.href)}
-            className="h-50 w-96 rounded-md hover:-translate-y-3 hover:shadow-md duration-300 border-gray-700 border-2"
+            className="h-50 w-96 rounded-md hover:shadow-md duration-300 border-gray-700 border-2 hover:w-[400px] cursor-pointer"
           />
-          <div className="font-semibold font-sans grid gap-2">
+          <div className="font-semibold font-sans grid gap-2 w-[50%]">
             <label className="hover:underline hover:cursor-pointer">
               {projects_data.title}
             </label>
-            <label className="text-[15px] font-normal pl-3">
+            <label className="text-[15px] font-normal pl-3 ">
               {projects_data.discrp}
             </label>
             <label className="text-[15px] font-thin pl-3">

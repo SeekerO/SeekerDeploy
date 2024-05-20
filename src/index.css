@@ -15,7 +15,6 @@
   @apply bg-[#FAF4D3];
 }
 
-
 /* Other CSS */
 .textColor {
   @apply text-[#FAF4D3];
@@ -28,3 +27,5 @@
 .grid-container--fit {
   grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
 }
+
+/* test */
