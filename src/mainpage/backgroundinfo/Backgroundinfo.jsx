@@ -28,7 +28,7 @@ const Backgroundinfo = () => {
         <div
           className={`flex-col flex  items-center md:mt-[5rem] mt-[10rem] gap-5 justify-center`}
         >
-          <div className="h-[200px] w-[200px] md:h-[300px] md:w-[300px] rounded-full bg-gray-600 flex-shrink-0 " />
+          <div className="h-[250px] w-[250px] md:h-[300px] md:w-[300px] rounded-full bg-gray-600 flex-shrink-0 " />
 
           <div
             className={`  md:mt-0 mt-10 flex flex-col textColor items-center text-center`}
