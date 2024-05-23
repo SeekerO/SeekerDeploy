@@ -22,7 +22,7 @@
 }
 
 .buttonHeader {
-  @apply hover:underline hover:cursor-pointer font-thin;
+  @apply hover:underline hover:cursor-pointer font-thin tracking-widest;
 }
 
 .side-buttonHeader {
