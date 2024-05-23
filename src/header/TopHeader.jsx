@@ -68,7 +68,7 @@ const TopHeader = ({ openSideBar, setopenSideBar }) => {
           </motion.div>
         </h1>
 
-        {!openSideBar && (
+        {!openSideBar && isSmallScreen && (
           <GiHamburgerMenu
             onClick={() => setopenSideBar(!openSideBar)}
             className="absolute right-10 text-[25px] cursor-pointer "
