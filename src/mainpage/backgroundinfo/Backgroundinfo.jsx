@@ -28,18 +28,18 @@ const Backgroundinfo = () => {
         <div
           className={`flex-col flex  items-center mt-[8%] gap-5 justify-center`}
         >
-          <div className="h-[400px] w-[400px] md:h-[300px] md:w-[300px] rounded-full bg-gray-600 flex-shrink-0 " />
+          <div className="h-[200px] w-[200px] md:h-[300px] md:w-[300px] rounded-full bg-gray-600 flex-shrink-0 " />
 
           <div
             className={`  md:mt-0 mt-10 flex flex-col textColor items-center text-center`}
           >
-            <label className="flex text-[40px] pr-1 font-bold">
+            <label className="flex md:text-[40px] text-[30px] pr-1 font-bold">
               Hello!
-              <motion.span className="text-[40px] pr-1">
+              <motion.span className="md:text-[40px] text-[30px]  pr-1">
                 I'am John Albert Baisa
               </motion.span>
             </label>
-            <div className="text-[25px] tracking-widest">
+            <div className="md:text-[25px] text-[20px]  tracking-widest">
               A Full-Stack Web Developer
             </div>
             <div className="w-[60%] h-[1px] bg-[#FAF4D3]" />

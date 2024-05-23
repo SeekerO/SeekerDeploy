@@ -87,7 +87,7 @@ const Projects = () => {
             onClick={() => openLink(projects_data.href)}
             className="h-50 w-96 rounded-md hover:shadow-md duration-300 border-gray-700 border-2 hover:w-[400px] cursor-pointer"
           />
-          <div className="font-semibold font-sans grid gap-2 w-[50%]">
+          <div className="font-semibold font-sans grid gap-2 md:w-[50%]">
             <label className="hover:underline hover:cursor-pointer">
               {projects_data.title}
             </label>

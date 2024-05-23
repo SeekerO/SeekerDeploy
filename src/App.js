@@ -1,15 +1,17 @@
 import TopHeader from "./header/TopHeader";
 import Corner from "./lottie/CornerLottie";
-import WaveAnimation from "./lottie/Wave";
+import SideBar from "./header/sidebar/SideBar";
 import Mainpage from "./mainpage/Mainpage";
 import React, { useEffect, useRef, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { motion } from "framer-motion";
 
 function App() {
   const [isSticky, setSticky] = useState(false);
   const navbarRef = useRef(null); // Use useRef to reference the navbar element
   const navbarTopPosition = useRef(0); // To store the initial top position of the navbar
+  const [openSideBar, setopenSideBar] = useState(false); // To open side bar
 
   const handleScroll = () => {
     if (navbarRef.current) {
@@ -38,19 +40,23 @@ function App() {
       </div>
 
       <main className=" z-10 relative">
-        <div className="w-full h-full  absolute" />
+        {/* <div className="w-full h-full  absolute" /> */}
         <nav
           ref={navbarRef}
-          className={` fixed top-0 w-screen z-10  ${
+          className={` fixed top-0 w-screen   ${
             isSticky
               ? " bg-[#192224] duration-500"
               : "bg-[#19222400] duration-500"
           } `}
         >
-          <TopHeader />
+          <TopHeader
+            openSideBar={openSideBar}
+            setopenSideBar={setopenSideBar}
+          />
         </nav>
         <Analytics />
         <SpeedInsights />
+        <SideBar openSideBar={openSideBar} setopenSideBar={setopenSideBar} />
         <Mainpage />
       </main>
 
