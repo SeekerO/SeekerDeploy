@@ -33,12 +33,12 @@ const Backgroundinfo = () => {
           <div
             className={`  md:mt-0 mt-10 flex flex-col textColor items-center text-center`}
           >
-            <label className="flex md:text-[40px] text-[30px] pr-1 font-bold">
+            <div className="flex md:text-[40px] text-[30px] pr-1 font-bold flex-wrap justify-center gap-x-1">
               Hello!
               <motion.span className="md:text-[40px] text-[30px]  pr-1">
                 I'am John Albert Baisa
               </motion.span>
-            </label>
+            </div>
             <div className="md:text-[25px] text-[20px]  tracking-widest">
               A Full-Stack Web Developer
             </div>
