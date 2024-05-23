@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 function SideBar({ openSideBar, setopenSideBar }) {
@@ -12,11 +12,28 @@ function SideBar({ openSideBar, setopenSideBar }) {
     section.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
+  const divRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (divRef.current && !divRef.current.contains(event.target)) {
+      setopenSideBar(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <motion.div
+      ref={divRef}
       animate={openSideBar ? "open" : "closed"}
       variants={variants}
       className={`text-black h-screen w-[20rem] bg-[#192224] fixed  right-0`}
+      onOutSid
     >
       <IoMdClose
         onClick={() => setopenSideBar(!openSideBar)}

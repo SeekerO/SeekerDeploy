@@ -71,7 +71,7 @@ const TopHeader = ({ openSideBar, setopenSideBar }) => {
         {!openSideBar && isSmallScreen && (
           <GiHamburgerMenu
             onClick={() => setopenSideBar(!openSideBar)}
-            className="absolute right-10 text-[25px] cursor-pointer "
+            className="absolute right-3 text-[25px] cursor-pointer "
           />
         )}
 
