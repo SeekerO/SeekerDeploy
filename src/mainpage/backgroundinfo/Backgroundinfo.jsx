@@ -26,7 +26,7 @@ const Backgroundinfo = () => {
     <>
       <div className={` h-screen w-screen  lg:px-40 px-10`}>
         <div
-          className={`flex-col flex  items-center mt-[8%] gap-5 justify-center`}
+          className={`flex-col flex  items-center md:mt-[5rem] mt-[10rem] gap-5 justify-center`}
         >
           <div className="h-[200px] w-[200px] md:h-[300px] md:w-[300px] rounded-full bg-gray-600 flex-shrink-0 " />
 
@@ -35,7 +35,7 @@ const Backgroundinfo = () => {
           >
             <div className="flex md:text-[40px] text-[30px] pr-1 font-bold flex-wrap justify-center gap-x-1">
               Hello!
-              <motion.span className="md:text-[40px] text-[30px]  pr-1">
+              <motion.span className="md:text-[40px] text-[30px] flex-shrink-0 pr-1">
                 I'am John Albert Baisa
               </motion.span>
             </div>
