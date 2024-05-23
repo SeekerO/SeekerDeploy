@@ -37,7 +37,7 @@ function SideBar({ openSideBar, setopenSideBar }) {
     >
       <IoMdClose
         onClick={() => setopenSideBar(!openSideBar)}
-        className="mt-11 right-10 absolute textColor text-[30px] hover:text-red-500"
+        className="mt-11 right-3 absolute textColor text-[30px] hover:text-red-500"
       />
       <nav className="mt-[8rem] flex flex-col gap-y-2 ">
         <motion.a
