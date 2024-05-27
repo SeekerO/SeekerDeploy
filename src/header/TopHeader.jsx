@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { GiHamburgerMenu } from "react-icons/gi";
-const TopHeader = ({ openSideBar, setopenSideBar }) => {
+const TopHeader = ({
+  openSideBar,
+  setopenSideBar,
+  inViewHOME,
+  inViewSKILLS,
+  inViewPROJECTS,
+  inViewABOUT,
+  inViewCONTACTS,
+}) => {
   const text = "SEEKERDEV";
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -33,7 +41,11 @@ const TopHeader = ({ openSideBar, setopenSideBar }) => {
                 ease: "easeOut", // Easing function for the opacity animation
               }}
               onClick={() => handleScroll("home")}
-              className="buttonHeader"
+              className={`${
+                inViewHOME
+                  ? "font-normal underline-offset-4 underline"
+                  : "font-thin"
+              } buttonHeader`}
             >
               HOME
             </motion.a>
@@ -46,7 +58,11 @@ const TopHeader = ({ openSideBar, setopenSideBar }) => {
                 ease: "easeOut", // Easing function for the opacity animation
               }}
               onClick={() => handleScroll("projects")}
-              className="buttonHeader"
+              className={`${
+                inViewSKILLS || inViewPROJECTS
+                  ? "font-normal underline-offset-4 underline"
+                  : "font-thin"
+              } buttonHeader`}
             >
               PROJECTS
             </motion.a>
@@ -77,7 +93,6 @@ const TopHeader = ({ openSideBar, setopenSideBar }) => {
 
         {!isSmallScreen && (
           <>
-            {" "}
             <motion.a
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -87,8 +102,13 @@ const TopHeader = ({ openSideBar, setopenSideBar }) => {
                 ease: "easeOut", // Easing function for the opacity animation
               }}
               onClick={() => handleScroll("about")}
-              className="buttonHeader"
+              className={`${
+                inViewABOUT
+                  ? "font-normal underline-offset-4 underline"
+                  : "font-thin"
+              } buttonHeader`}
             >
+              {" "}
               ABOUT
             </motion.a>
             <motion.a
@@ -100,7 +120,11 @@ const TopHeader = ({ openSideBar, setopenSideBar }) => {
                 ease: "easeOut", // Easing function for the opacity animation
               }}
               onClick={() => handleScroll("contacts")}
-              className="buttonHeader"
+              className={`${
+                inViewCONTACTS
+                  ? "font-normal underline-offset-4 underline"
+                  : "font-thin"
+              } buttonHeader`}
             >
               CONTACT ME
             </motion.a>

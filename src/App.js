@@ -5,13 +5,32 @@ import Mainpage from "./mainpage/Mainpage";
 import React, { useEffect, useRef, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { motion, useScroll } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function App() {
   const [isSticky, setSticky] = useState(false);
   const navbarRef = useRef(null); // Use useRef to reference the navbar element
   const navbarTopPosition = useRef(0); // To store the initial top position of the navbar
   const [openSideBar, setopenSideBar] = useState(false); // To open side bar
+
+  const [home, inViewHOME] = useInView({
+    threshold: 0.8,
+  });
+  const [skills, inViewSKILLS] = useInView({
+    threshold: 0.1,
+  });
+
+  const [projects, inViewPROJECTS] = useInView({
+    threshold: 0.4,
+  });
+
+  const [about, inViewABOUT] = useInView({
+    threshold: 0.8,
+  });
+
+  const [contacts, inViewCONTACTS] = useInView({
+    threshold: 0.8,
+  });
 
   const handleScroll = () => {
     if (navbarRef.current) {
@@ -26,6 +45,7 @@ function App() {
   };
 
   useEffect(() => {
+    window.history.pushState(null, "/", "home");
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -52,12 +72,23 @@ function App() {
           <TopHeader
             openSideBar={openSideBar}
             setopenSideBar={setopenSideBar}
+            inViewHOME={inViewHOME}
+            inViewSKILLS={inViewSKILLS}
+            inViewPROJECTS={inViewPROJECTS}
+            inViewABOUT={inViewABOUT}
+            inViewCONTACTS={inViewCONTACTS}
           />
         </nav>
         <Analytics />
         <SpeedInsights />
         <SideBar openSideBar={openSideBar} setopenSideBar={setopenSideBar} />
-        <Mainpage />
+        <Mainpage
+          home={home}
+          projects={projects}
+          skills={skills}
+          about={about}
+          contacts={contacts}
+        />
       </main>
 
       <div className=" w-full justify-start flex rotate-180">

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import animationData from "./Animation - 1714726111428 (1).json";
 
-const Backgroundinfo = () => {
+const Backgroundinfo = ({ home }) => {
   const [screenSize, SetScreenSize] = useState();
   const getDeviceType = () => {
     const width = window.innerWidth;

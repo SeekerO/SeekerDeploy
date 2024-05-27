@@ -1,31 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import Backgroundinfo from "./backgroundinfo/Backgroundinfo";
 import Skills from "./skills/Skills";
 import Projects from "./projects/Projects";
 import AboutMe from "./about/AboutMe";
 import ContactMe from "./contact/ContactMe";
+import { useInView } from "framer-motion";
 
-const Mainpage = () => {
+export default function Mainpage({ home, skills, projects, about, contacts }) {
   return (
     <div className="overflow-x-auto overflow-y-hidden w-screen mb-56 flex flex-col">
-      <div className="pt-20">
+      <div ref={home} className="pt-20">
         <Backgroundinfo />
       </div>
-      <div id="tech-stacks">
+      <div ref={skills} id="tech-stacks">
         <Skills />
       </div>
-      <div id="projects" className="mt-20" />
-      <div className=" w-full">
+      <div id="projects" className="" />
+      <div ref={projects} className=" w-full mt-20">
         <Projects />
       </div>
-      <div id="about" className="">
+      <div ref={about} id="about" className="mb-10">
         <AboutMe />
       </div>
-      <div id="contacts">
+      <div ref={contacts} id="contacts">
         <ContactMe />
       </div>
     </div>
   );
-};
-
-export default Mainpage;
+}

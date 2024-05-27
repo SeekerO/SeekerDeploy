@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <div className="textColor md:px-40 px-10 mt-40 text-[18px] ">
+    <div className="textColor md:px-40 px-10  text-[18px] ">
       <label className="font-semibold text-[25px]">ABOUT</label>
       <p className="pt-2 font-thin text-justify">
         Hello! My name is <strong className="font-semibold">John</strong>, but you can call me <strong className="font-semibold">Albert</strong> if
