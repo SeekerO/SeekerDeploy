@@ -32,6 +32,14 @@ function App() {
     threshold: 0.8,
   });
 
+  useEffect(() => {
+    if (inViewHOME) window.history.pushState(null, "/", "home");
+    if (inViewPROJECTS || inViewSKILLS)
+      window.history.pushState(null, "/", "projects");
+    if (inViewABOUT) window.history.pushState(null, "/", "about");
+    if (inViewCONTACTS) window.history.pushState(null, "/", "contacts");
+  }, [inViewHOME, inViewSKILLS, inViewPROJECTS, inViewABOUT, inViewCONTACTS]);
+
   const handleScroll = () => {
     if (navbarRef.current) {
       // Get the initial top position once when the component mounts
@@ -45,7 +53,6 @@ function App() {
   };
 
   useEffect(() => {
-    window.history.pushState(null, "/", "home");
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -67,7 +74,7 @@ function App() {
             isSticky
               ? " bg-[#192224] duration-500"
               : "bg-[#19222400] duration-500"
-          } `}
+          } z-50`}
         >
           <TopHeader
             openSideBar={openSideBar}
@@ -82,13 +89,15 @@ function App() {
         <Analytics />
         <SpeedInsights />
         <SideBar openSideBar={openSideBar} setopenSideBar={setopenSideBar} />
-        <Mainpage
-          home={home}
-          projects={projects}
-          skills={skills}
-          about={about}
-          contacts={contacts}
-        />
+        <div className="z-0">
+          <Mainpage
+            home={home}
+            projects={projects}
+            skills={skills}
+            about={about}
+            contacts={contacts}
+          />
+        </div>
       </main>
 
       <div className=" w-full justify-start flex rotate-180">

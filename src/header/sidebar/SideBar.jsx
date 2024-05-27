@@ -32,7 +32,7 @@ function SideBar({ openSideBar, setopenSideBar }) {
       ref={divRef}
       animate={openSideBar ? "open" : "closed"}
       variants={variants}
-      className={`text-black h-screen w-[20rem] bg-[#192224] fixed  right-0`}
+      className={`text-black h-screen w-[20rem] bg-[#192224] fixed  right-0 z-50`}
       onOutSid
     >
       <IoMdClose
