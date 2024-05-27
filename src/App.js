@@ -61,7 +61,7 @@ function App() {
   }, []);
 
   return (
-    <div className="maincolor overflow-y-auto overflow-x-hidden">
+    <div className="maincolor overflow-hidden">
       <div id="home" className=" w-full justify-start flex">
         <Corner />
       </div>

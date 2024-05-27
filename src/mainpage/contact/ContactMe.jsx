@@ -17,6 +17,7 @@ const ContactMe = () => {
           viewBox="0 0 50 50"
           width="48px"
           height="48px"
+          className="contacts-icon "
         >
           <path
             fill="white"
@@ -25,11 +26,11 @@ const ContactMe = () => {
         </svg>
       );
     } else if (soc === "Facebook") {
-      return <FaFacebook className="h-[48px] w-[48px] text-white" />;
+      return <FaFacebook className=" contacts-icon  h-[48px] w-[48px] text-white" />;
     } else if (soc === "Discord") {
-      return <FaDiscord className="h-[48px] w-[48px] text-white" />;
+      return <FaDiscord className=" contacts-icon  h-[48px] w-[48px] text-white" />;
     } else if (soc === "Github") {
-      return <FaGithub className="h-[48px] w-[48px] text-white" />;
+      return <FaGithub className=" contacts-icon  h-[48px] w-[48px] text-white" />;
     }
   };
 
@@ -64,7 +65,7 @@ const ContactMe = () => {
               className="flex flex-col justify-center items-center px-7 mt-10 hover:cursor-pointer"
               onClick={() => openLink(meta_data.href)}
             >
-              <div className="flex flex-shrink-0  items-center justify-center">
+              <div className="flex flex-shrink-0 contacts-icon items-center justify-center">
                 {iconSetter(meta_data.soc)}
               </div>
               <label className="tracking-widest font-thin">

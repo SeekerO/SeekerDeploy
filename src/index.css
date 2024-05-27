@@ -53,3 +53,20 @@
   text-underline-offset: 2px;
 }
 
+.icon {
+  filter: drop-shadow(1px 1px 3px #363636);
+}
+
+.contacts-icon {
+  cursor: pointer;
+  transition: scale 0.25s ease-in, opacity 0.25s ease-in, filter 0.25s ease-in;
+
+  &:hover {
+    scale: 1;
+  }
+}
+
+.contacts-icon:has(.contacts-icon).contacts-icon:not(:hover) {
+  scale: 0.8;
+  opacity: 0.8;
+}

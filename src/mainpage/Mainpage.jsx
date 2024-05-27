@@ -7,6 +7,7 @@ import ContactMe from "./contact/ContactMe";
 import { useInView } from "framer-motion";
 
 export default function Mainpage({ home, skills, projects, about, contacts }) {
+  
   return (
     <div className="overflow-x-auto overflow-y-hidden w-screen mb-56 flex flex-col">
       <div ref={home} className="pt-20">

@@ -16,19 +16,23 @@ const Projects = () => {
     {
       id: 1,
       title: "-STI iMonitor (Web-App)",
-      subtitle: "#CSS #HTML #JAVASCRIPT #NODE.JS #REACT #SUPABASE",
+      subtitle:
+        "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT #SUPABASE",
       src: iMonitor,
       href: "https://imonitor.site/",
       discrp:
         "A monitoring and management system with built in messaging system for OJT student in STI Santa Maria College",
+      status: "online",
     },
     {
       id: 2,
       title: "-Send-Here (Web-App)",
-      subtitle: "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT",
+      subtitle:
+        "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT #SUPABASE",
       src: Send_here,
       href: "https://seekero.github.io/Send_Here/",
       discrp: "A mock up Messenger",
+      status: "offline",
     },
     {
       id: 3,
@@ -37,6 +41,7 @@ const Projects = () => {
       src: Seekerdev,
       href: "#",
       discrp: "My personal portoflio where it shows my previous projects",
+      status: "online",
     },
     {
       id: 4,
@@ -45,6 +50,7 @@ const Projects = () => {
       src: Akira,
       href: "https://akiramovingsystems.com/",
       discrp: "A showcase website for Akira Moving System",
+      status: "online",
     },
     {
       id: 5,
@@ -53,6 +59,7 @@ const Projects = () => {
       src: Todo,
       href: "https://to-do-list-ten-theta.vercel.app/",
       discrp: "To-Do and Scheduler Application",
+      status: "online",
     },
   ];
 
@@ -115,8 +122,20 @@ const Projects = () => {
             </div>
 
             <div className="font-semibold font-sans grid gap-2 md:w-[50%] z-10">
+              <div
+                className={`${
+                  projects_data.status === "online"
+                    ? "text-green-500"
+                    : "text-red-500"
+                } uppercase text-[10px] font-normal bg-slate-700 w-fit px-1 rounded-md flex gap-1 text-center`}
+              >
+                <span> {projects_data.status}</span>
+                <span>{projects_data.status === "offline" && "DATABASE"}</span>
+              </div>
               <div className="hover:cursor-pointer group flex gap-2 items-center">
-                <span className="hover:underline hover:underline-offset-8 ">{projects_data.title}</span>
+                <span className="hover:underline hover:underline-offset-8 ">
+                  {projects_data.title}
+                </span>
                 <div className="flex items-center opacity-0 group-hover:opacity-100 duration-300 -translate-x-10 group-hover:translate-x-0 text-[15px]">
                   <MdKeyboardDoubleArrowRight className="text-[20px]" />{" "}
                   <span className="delay-700 transition-opacity ">
