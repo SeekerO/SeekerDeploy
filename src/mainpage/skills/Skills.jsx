@@ -16,6 +16,7 @@ const Skills = () => {
     { id:12,type: "FIGMA" },
     { id:13,type: "WORDPRESS" },
     { id:14,type: "SUPABASE" },
+    { id:14,type: "VITE" },
     
   ];
 
