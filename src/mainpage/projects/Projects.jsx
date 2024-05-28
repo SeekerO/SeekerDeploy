@@ -22,7 +22,7 @@ const Projects = () => {
       href: "https://imonitor.site/",
       discrp:
         "A monitoring and management system with built in messaging system for OJT student in STI Santa Maria College",
-      status: "online",
+      status: "maintenance",
     },
     {
       id: 2,
@@ -126,11 +126,15 @@ const Projects = () => {
                 className={`${
                   projects_data.status === "online"
                     ? "text-green-500"
-                    : "text-red-500"
+                    : `${
+                        projects_data.status === "maintenance"
+                          ? "text-yellow-500"
+                          : "text-red-500"
+                      }`
                 } uppercase text-[10px] font-normal bg-slate-700 w-fit px-1 rounded-md flex gap-1 text-center`}
               >
                 <span> {projects_data.status}</span>
-                <span>{projects_data.status === "offline" && "DATABASE"}</span>
+                {/* <span>{projects_data.status === "offline" && "DATABASE"}</span> */}
               </div>
               <div className="hover:cursor-pointer group flex gap-2 items-center">
                 <span className="hover:underline hover:underline-offset-8 ">
