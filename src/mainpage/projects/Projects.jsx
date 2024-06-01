@@ -15,7 +15,7 @@ const Projects = () => {
   const projects_meta_data = [
     {
       id: 1,
-      title: "-STI iMonitor (Web-App)",
+      title: "-V2 iMonitor (Web-App)",
       subtitle:
         "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT #SUPABASE",
       src: iMonitor,
@@ -64,13 +64,17 @@ const Projects = () => {
   ];
 
   function openLink(url, id) {
-    if (id === id) {
-      setopenLottie(true);
-    }
-    setTimeout(() => {
+    const width = window.innerWidth;
+    if (width <= 768) {
       window.open(url, "_blank");
-      setopenLottie(false);
-    }, 1600);
+    } else if (id === id) {
+      setopenLottie(true);
+
+      setTimeout(() => {
+        window.open(url, "_blank");
+        setopenLottie(false);
+      }, 1600);
+    }
   }
 
   return (

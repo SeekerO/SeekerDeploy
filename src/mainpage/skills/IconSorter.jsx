@@ -363,8 +363,8 @@ const IconSorter = ({ name }) => {
             y2="44.0710077%"
             id="supabase-linearGradient-1"
           >
-            <stop stop-color="#249361" offset="0%"></stop>
-            <stop stop-color="#3ECF8E" offset="100%"></stop>
+            <stop stopColor="#249361" offset="0%"></stop>
+            <stop stopColor="#3ECF8E" offset="100%"></stop>
           </linearGradient>
           <linearGradient
             x1="1.99116498%"
@@ -373,8 +373,8 @@ const IconSorter = ({ name }) => {
             y2="34.708062%"
             id="supabase-linearGradient-2"
           >
-            <stop stop-color="#000000" offset="0%"></stop>
-            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+            <stop stopColor="#000000" offset="0%"></stop>
+            <stop stopColor="#000000" stopOpacity="0" offset="100%"></stop>
           </linearGradient>
         </defs>
         <g>
@@ -384,7 +384,7 @@ const IconSorter = ({ name }) => {
           ></path>
           <path
             d="M149.601512,258.578826 C142.884085,267.038157 129.263882,262.403261 129.102024,251.601817 L126.735244,93.6176533 L232.963622,93.6176533 C252.204429,93.6176533 262.935398,115.840956 250.971119,130.909887 L149.601512,258.578826 Z"
-            fill-opacity="0.2"
+            fillOpacity="0.2"
             fill="url(#supabase-linearGradient-2)"
           ></path>
           <path
@@ -425,9 +425,9 @@ const IconSorter = ({ name }) => {
           y2="4.266"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#0a070a" />
-          <stop offset=".465" stop-color="#2b2b2b" />
-          <stop offset="1" stop-color="#4b4b4b" />
+          <stop offset="0" stopColor="#0a070a" />
+          <stop offset=".465" stopColor="#2b2b2b" />
+          <stop offset="1" stopColor="#4b4b4b" />
         </linearGradient>
         <circle
           cx="24"
@@ -444,9 +444,9 @@ const IconSorter = ({ name }) => {
           y2="18.431"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".377" stop-color="#fff" stop-opacity="0" />
-          <stop offset=".666" stop-color="#fff" stop-opacity=".3" />
-          <stop offset=".988" stop-color="#fff" />
+          <stop offset=".377" stopColor="#fff" stopOpacityty="0" />
+          <stop offset=".666" stopColor="#fff" stopOpacityty=".3" />
+          <stop offset=".988" stopColor="#fff" />
         </linearGradient>
         <rect
           width="2.953"
@@ -463,9 +463,9 @@ const IconSorter = ({ name }) => {
           y2="40.529"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".296" stop-color="#fff" />
-          <stop offset=".521" stop-color="#fff" stop-opacity=".5" />
-          <stop offset=".838" stop-color="#fff" stop-opacity="0" />
+          <stop offset=".296" stopColor="#fff" />
+          <stop offset=".521" stopColor="#fff" stopOpacityty=".5" />
+          <stop offset=".838" stopColor="#fff" stopOpacityty="0" />
         </linearGradient>
         <polygon
           fill="url(#NRNx2IPDe7PJlJvrxOKgWc)"
@@ -492,8 +492,8 @@ const IconSorter = ({ name }) => {
           gradientTransform="matrix(1 0 0 -1 0 514)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#41d1ff"></stop>
-          <stop offset="1" stop-color="#9231be"></stop>
+          <stop offset="0" stopColor="#41d1ff"></stop>
+          <stop offset="1" stopColor="#9231be"></stop>
         </linearGradient>
         <path
           fill="url(#oOTIjsOjTqJdvfy5S4iCZa_dJjTWMogzFzg_gr1)"
@@ -508,8 +508,8 @@ const IconSorter = ({ name }) => {
           gradientTransform="matrix(1 0 0 -1 0 514)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#fed100"></stop>
-          <stop offset="1" stop-color="#e36001"></stop>
+          <stop offset="0" stopColor="#fed100"></stop>
+          <stop offset="1" stopColor="#e36001"></stop>
         </linearGradient>
         <path
           fill="url(#oOTIjsOjTqJdvfy5S4iCZb_dJjTWMogzFzg_gr2)"

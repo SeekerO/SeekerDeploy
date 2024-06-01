@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import animationData from "./Animation - 1714726111428 (1).json";
 
 const Backgroundinfo = ({ home }) => {
   const [screenSize, SetScreenSize] = useState();
@@ -42,7 +41,12 @@ const Backgroundinfo = ({ home }) => {
             <div className="md:text-[25px] text-[20px]  tracking-widest">
               A Full-Stack Web Developer
             </div>
-            <div className="w-[60%] h-[1px] bg-[#FAF4D3]" />
+            <motion.div
+              initial={{ width: "0%" }}
+              animate={{ width: "60%" }}
+              transition={{ duration: 1, delay: 2 }}
+              className=" h-[1px] bg-[#FAF4D3]"
+            />
           </div>
         </div>
       </div>
