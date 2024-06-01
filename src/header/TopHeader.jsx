@@ -42,12 +42,18 @@ const TopHeader = ({
               }}
               onClick={() => handleScroll("home")}
               className={`${
-                inViewHOME
-                  ? "font-normal underline-offset-4 underline"
-                  : "font-thin"
-              } buttonHeader`}
+                inViewHOME ? "font-normal" : "font-thin"
+              } buttonHeader flex flex-col`}
             >
               HOME
+              {inViewHOME && (
+                <motion.span
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white h-[1px]"
+                />
+              )}
             </motion.a>
             <motion.a
               initial={{ opacity: 0 }}
@@ -59,12 +65,18 @@ const TopHeader = ({
               }}
               onClick={() => handleScroll("projects")}
               className={`${
-                inViewSKILLS || inViewPROJECTS
-                  ? "font-normal underline-offset-4 underline"
-                  : "font-thin"
-              } buttonHeader`}
+                inViewPROJECTS || inViewSKILLS ? "font-normal" : "font-thin"
+              } buttonHeader flex flex-col`}
             >
               PROJECTS
+              {(inViewPROJECTS || inViewSKILLS) && (
+                <motion.span
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white h-[1px]"
+                />
+              )}
             </motion.a>
           </>
         )}
@@ -103,13 +115,18 @@ const TopHeader = ({
               }}
               onClick={() => handleScroll("about")}
               className={`${
-                inViewABOUT
-                  ? "font-normal underline-offset-4 underline"
-                  : "font-thin"
-              } buttonHeader`}
+                inViewABOUT && !inViewCONTACTS ? "font-normal" : "font-thin"
+              } buttonHeader flex flex-col`}
             >
-              {" "}
-              ABOUT
+              ABOUT{" "}
+              {inViewABOUT && !inViewCONTACTS && (
+                <motion.span
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white h-[1px]"
+                />
+              )}
             </motion.a>
             <motion.a
               initial={{ opacity: 0 }}
@@ -121,12 +138,18 @@ const TopHeader = ({
               }}
               onClick={() => handleScroll("contacts")}
               className={`${
-                inViewCONTACTS
-                  ? "font-normal underline-offset-4 underline"
-                  : "font-thin"
-              } buttonHeader`}
+                inViewCONTACTS ? "font-normal" : "font-thin"
+              } buttonHeader flex flex-col`}
             >
-              CONTACT ME
+              CONTACT ME{" "}
+              {inViewCONTACTS && (
+                <motion.span
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white h-[1px]"
+                />
+              )}
             </motion.a>
           </>
         )}
