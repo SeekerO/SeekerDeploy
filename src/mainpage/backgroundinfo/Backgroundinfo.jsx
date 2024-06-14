@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import { AiOutlineDownload } from "react-icons/ai";
 const Backgroundinfo = ({ home }) => {
   const [screenSize, SetScreenSize] = useState();
   const getDeviceType = () => {
@@ -10,17 +10,23 @@ const Backgroundinfo = ({ home }) => {
     else if (width >= 768 && width < 1024) return "Laptop";
     else return "Desktop";
   };
-  // Effect to add and remove the resize event listener
+
   useEffect(() => {
     const handleResize = () => {
       SetScreenSize(getDeviceType());
     };
-
     window.addEventListener("resize", handleResize);
-    // Clean up the event listener when the component unmounts
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  const downloadFile = () => {
+    const link = document.createElement("a");
+    link.href =
+      "https://drive.google.com/uc?id=1DfMrMYlN6DCL0E7qV7H8YkgPw3718waE";
+    link.setAttribute("download", ""); // This attribute will make the file download when link is clicked
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <>
       <div className={` h-screen w-screen  lg:px-40 px-10`}>
@@ -47,6 +53,17 @@ const Backgroundinfo = ({ home }) => {
               transition={{ duration: 1, delay: 2 }}
               className=" h-[1px] bg-[#FAF4D3]"
             />
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 3 }}
+              onClick={() => downloadFile()}
+              className="flex items-center gap-2 px-5  py-2 rounded-md font-semibold bg-[#FAF4D3] text-[#0C1618] mt-5 
+            cursor-pointer duration-300 hover:translate-y-1"
+            >
+              <AiOutlineDownload className="text-[20px]" />
+              RESUME
+            </motion.button>
           </div>
         </div>
       </div>

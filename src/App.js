@@ -66,13 +66,13 @@ function App() {
         <Corner />
       </div>
 
-      <main className=" z-10 relative">
+      <main className=" z-10 ">
         {/* <div className="w-full h-full  absolute" /> */}
         <nav
           ref={navbarRef}
-          className={` fixed top-0 w-screen   ${
+          className={`fixed top-0 w-screen   ${
             isSticky
-              ? " bg-[#192224] duration-500"
+              ? " bg-[#192224] duration-500 "
               : "bg-[#19222400] duration-500"
           } z-50`}
         >
@@ -89,6 +89,7 @@ function App() {
         <Analytics />
         <SpeedInsights />
         <SideBar openSideBar={openSideBar} setopenSideBar={setopenSideBar} />
+
         <div className="z-0">
           <Mainpage
             home={home}

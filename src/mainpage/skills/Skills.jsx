@@ -3,26 +3,27 @@ import IconSorter from "./IconSorter";
 import { motion } from "framer-motion";
 const Skills = () => {
   const skills_meta_data = [
-    { id: 1, type: "JAVASCRIPT" },
-    { id: 3, type: "JAVA" },
-    { id: 4, type: "C Sharp" },
-    { id: 5, type: "CSS3" },
-    { id: 6, type: "HTML5" },
-    { id: 7, type: "REACTJS" },
-    { id: 8, type: "NODE.JS" },
-    { id: 9, type: "NEXTJS" },
-    { id: 10, type: "SVELTE" },
-    { id: 11, type: "TAILWIND CSS" },
-    { id: 12, type: "FIGMA" },
-    { id: 13, type: "WORDPRESS" },
-    { id: 14, type: "SUPABASE" },
-    { id: 14, type: "VITE" },
+    { type: "JAVASCRIPT" },
+    { type: "JAVA" },
+    { type: "C Sharp" },
+    { type: "CSS3" },
+    { type: "HTML5" },
+    { type: "REACTJS" },
+    { type: "NODE.JS" },
+    { type: "NEXTJS" },
+    { type: "SVELTE" },
+    { type: "TAILWIND CSS" },
+    { type: "FIGMA" },
+    { type: "WORDPRESS" },
+    { type: "SUPABASE" },
+    { type: "FIREBASE" },
+    { type: "VITE" },
   ];
 
   return (
-    <div className="lg:px-40 px-10 mt-32">
+    <div className="lg:px-40 px-10 mt-32 w-full justify-center items-center flex flex-col">
       <div className="textColor mt-20 text-[25px] font-bold">TECH-STACKS</div>
-      <div className="flex  flex-wrap sm:gap-4 gap-2 mt-3 justify-start">
+      <div className="flex  flex-wrap sm:gap-4 gap-2 mt-5 ">
         {skills_meta_data.map((meta_data, index) => (
           <div
             key={index}
