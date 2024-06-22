@@ -6,7 +6,7 @@ import Seekerdev from "../images/SEEKERDEV.png";
 import Todo from "../images/Todo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import Wink from "./WinkLottie";
+import Wink from "./winkAnimation/WinkLottie";
 
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -16,13 +16,12 @@ const Projects = () => {
     {
       id: 1,
       title: "-V2 iMonitor (Web-App)",
-      subtitle:
-        "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT #SUPABASE",
+      subtitle: "#TAILWINDCSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT #VITE",
       src: iMonitor,
       href: "https://imonitor.site/",
       discrp:
         "A monitoring and management system with built in messaging system for OJT student in STI Santa Maria College",
-      status: "maintenance",
+      status: "online",
     },
     {
       id: 2,
@@ -32,7 +31,7 @@ const Projects = () => {
       src: Send_here,
       href: "https://seekero.github.io/Send_Here/",
       discrp: "A mock up Messenger",
-      status: "offline",
+      status: "offline database",
     },
     {
       id: 3,
@@ -55,7 +54,7 @@ const Projects = () => {
     {
       id: 5,
       title: "-TODO (Web-App)",
-      subtitle: "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT",
+      subtitle: "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT  #VITE",
       src: Todo,
       href: "https://to-do-list-ten-theta.vercel.app/",
       discrp: "To-Do and Scheduler Application",
@@ -128,10 +127,10 @@ const Projects = () => {
             <div className="font-semibold font-sans grid gap-2 md:w-[50%] z-10">
               <div
                 className={`${
-                  projects_data.status === "online"
+                  projects_data.status.includes("online")
                     ? "text-green-500"
                     : `${
-                        projects_data.status === "maintenance"
+                        projects_data.status.includes("maintenance")
                           ? "text-yellow-500"
                           : "text-red-500"
                       }`
@@ -140,17 +139,13 @@ const Projects = () => {
                 <span> {projects_data.status}</span>
                 {/* <span>{projects_data.status === "offline" && "DATABASE"}</span> */}
               </div>
-              <div className="hover:cursor-pointer group flex gap-2 items-center">
+              <div
+                onClick={() => window.open(projects_data.href, "")}
+                className="hover:cursor-pointer group flex gap-2 items-center"
+              >
                 <span className="hover:underline hover:underline-offset-8 ">
                   {projects_data.title}
                 </span>
-                <div className="flex items-center opacity-0 group-hover:opacity-100 duration-300 -translate-x-10 group-hover:translate-x-0 text-[15px]">
-                  <MdKeyboardDoubleArrowRight className="text-[20px]" />{" "}
-                  <span className="delay-700 transition-opacity ">
-                    {" "}
-                    LEARN MORE
-                  </span>
-                </div>
               </div>
               <label className="text-[15px] font-normal pl-3 ">
                 {projects_data.discrp}
