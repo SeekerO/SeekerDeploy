@@ -4,8 +4,8 @@ import Send_here from "../images/Send_here.png";
 import Akira from "../images/Akira.png";
 import Seekerdev from "../images/SEEKERDEV.png";
 import Todo from "../images/Todo.png";
+import trackit from "../images/trackITpos.png"
 import { motion, AnimatePresence } from "framer-motion";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Wink from "./winkAnimation/WinkLottie";
 
 const Projects = () => {
@@ -58,6 +58,15 @@ const Projects = () => {
       src: Todo,
       href: "https://to-do-list-ten-theta.vercel.app/",
       discrp: "To-Do and Scheduler Application",
+      status: "online",
+    },
+    {
+      id: 6,
+      title: "-TrackITpos (Web-App)",
+      subtitle: "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT  #VITE #FIREBASE",
+      src: trackit,
+      href: "https://track-it-pos.vercel.app",
+      discrp: "A mini POS system using firebase",
       status: "online",
     },
   ];
