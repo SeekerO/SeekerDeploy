@@ -1,4 +1,4 @@
-import TopHeader from "./header/TopHeader";
+import TopHeader from "./layout/header/TopHeader";
 import Corner from "./lottie/CornerLottie";
 import SideBar from "./header/sidebar/SideBar";
 import Mainpage from "./layout/section/Mainpage";
