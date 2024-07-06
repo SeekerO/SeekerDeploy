@@ -1,13 +1,11 @@
 import React, { useRef } from "react";
 import Backgroundinfo from "./backgroundinfo/Backgroundinfo";
-import Skills from "./skills/Skills";
-import Projects from "./projects/Projects";
-import AboutMe from "./about/AboutMe";
-import ContactMe from "./contact/ContactMe";
-import { useInView } from "framer-motion";
+import Skills from "../section/skills/Skills";
+import Projects from "../section/project/Projects";
+import AboutMe from "../section/about/AboutMe";
+import ContactMe from "../section/contact/ContactMe";
 
 export default function Mainpage({ home, skills, projects, about, contacts }) {
-  
   return (
     <div className="overflow-x-auto overflow-y-hidden w-screen mb-56 flex flex-col">
       <div ref={home} className="pt-20">

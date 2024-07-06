@@ -1,7 +1,7 @@
 import TopHeader from "./header/TopHeader";
 import Corner from "./lottie/CornerLottie";
 import SideBar from "./header/sidebar/SideBar";
-import Mainpage from "./mainpage/Mainpage";
+import Mainpage from "./layout/section/Mainpage";
 import React, { useEffect, useRef, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";

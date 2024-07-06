@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import iMonitor from "../images/iMonitor.png";
-import Send_here from "../images/Send_here.png";
-import Akira from "../images/Akira.png";
-import Seekerdev from "../images/SEEKERDEV.png";
-import Todo from "../images/Todo.png";
-import trackit from "../images/trackITpos.png"
 import { motion, AnimatePresence } from "framer-motion";
 import Wink from "./winkAnimation/WinkLottie";
+import {
+  iMonitor,
+  Send_here,
+  Akira,
+  Seekerdev,
+  Todo,
+  trackit,
+  foodsearchy,
+} from "../../../images/images";
+
 
 const Projects = () => {
-  const [selectedId, setSelectedId] = useState(null);
   const [openLottie, setopenLottie] = useState(false);
 
   const projects_meta_data = [
@@ -54,7 +57,8 @@ const Projects = () => {
     {
       id: 5,
       title: "-TODO (Web-App)",
-      subtitle: "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT  #VITE",
+      subtitle:
+        "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT #VITE #LOCALSTORAGE",
       src: Todo,
       href: "https://to-do-list-ten-theta.vercel.app/",
       discrp: "To-Do and Scheduler Application",
@@ -63,9 +67,20 @@ const Projects = () => {
     {
       id: 6,
       title: "-TrackITpos (Web-App)",
-      subtitle: "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT  #VITE #FIREBASE",
+      subtitle:
+        "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT  #VITE #FIREBASE",
       src: trackit,
       href: "https://track-it-pos.vercel.app",
+      discrp: "A mini POS system using firebase",
+      status: "online",
+    },
+    {
+      id: 7,
+      title: "-FoodSearchy (Website)",
+      subtitle:
+        "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT #VITE #API",
+      src: foodsearchy,
+      href: "https://foodsearch-khaki.vercel.app",
       discrp: "A mini POS system using firebase",
       status: "online",
     },
@@ -97,7 +112,6 @@ const Projects = () => {
       {projects_meta_data.map((projects_data, index) => (
         <div key={projects_data.id}>
           <motion.div
-            onClick={() => setSelectedId(projects_data.id)}
             initial={{
               opacity: 0,
               // if odd index card,slide from right instead of left
