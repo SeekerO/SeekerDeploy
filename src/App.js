@@ -1,6 +1,6 @@
-import TopHeader from "./layout/header/TopHeader";
 import Corner from "./lottie/CornerLottie";
-import SideBar from "./header/sidebar/SideBar";
+import TopHeader from "./layout/header/TopHeader";
+import SideBar from "./layout/sidebar/SideBar";
 import Mainpage from "./layout/section/Mainpage";
 import React, { useEffect, useRef, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
