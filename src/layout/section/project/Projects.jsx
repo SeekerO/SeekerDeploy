@@ -81,7 +81,7 @@ const Projects = () => {
         "#TAILWIND CSS #CSS #HTML #JAVASCRIPT #NODE.JS #REACT #VITE #API",
       src: foodsearchy,
       href: "https://foodsearch-khaki.vercel.app",
-      discrp: "A mini POS system using firebase",
+      discrp: "A simple webiste food reciper searcher using API in theMealDB.",
       status: "online",
     },
   ];
