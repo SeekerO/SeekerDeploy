@@ -374,7 +374,7 @@ const IconSorter = ({ name }) => {
             id="supabase-linearGradient-2"
           >
             <stop stopColor="#000000" offset="0%"></stop>
-            <stop stopColor="#000000" stopOpacity="0" offset="100%"></stop>
+            <stop stopColor="#000000" stopopacityty="0" offset="100%"></stop>
           </linearGradient>
         </defs>
         <g>
@@ -444,8 +444,8 @@ const IconSorter = ({ name }) => {
           y2="18.431"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".377" stopColor="#fff" stopOpacityty="0" />
-          <stop offset=".666" stopColor="#fff" stopOpacityty=".3" />
+          <stop offset=".377" stopColor="#fff" stopopacityty="0" />
+          <stop offset=".666" stopColor="#fff" stopopacityty=".3" />
           <stop offset=".988" stopColor="#fff" />
         </linearGradient>
         <rect
@@ -464,8 +464,8 @@ const IconSorter = ({ name }) => {
           gradientUnits="userSpaceOnUse"
         >
           <stop offset=".296" stopColor="#fff" />
-          <stop offset=".521" stopColor="#fff" stopOpacityty=".5" />
-          <stop offset=".838" stopColor="#fff" stopOpacityty="0" />
+          <stop offset=".521" stopColor="#fff" stopopacityty=".5" />
+          <stop offset=".838" stopColor="#fff" stopopacityty="0" />
         </linearGradient>
         <polygon
           fill="url(#NRNx2IPDe7PJlJvrxOKgWc)"

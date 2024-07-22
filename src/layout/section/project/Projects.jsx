@@ -160,7 +160,7 @@ const Projects = () => {
                 } uppercase text-[10px] font-normal bg-slate-700 w-fit px-1 rounded-md flex gap-1 text-center`}
               >
                 <span> {projects_data.status}</span>
-                {/* <span>{projects_data.status === "offline" && "DATABASE"}</span> */}
+  
               </div>
               <div
                 onClick={() => window.open(projects_data.href, "")}
