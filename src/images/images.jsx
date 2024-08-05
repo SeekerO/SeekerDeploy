@@ -6,6 +6,8 @@ import Todo from "../images/Todo.png";
 import trackit from "../images/trackITpos.png";
 import foodsearchy from "../images/foodsearchy.png";
 import grad_pic from "../images/Grad_Pic.jpg";
+import uptomovie from "../images/UptoMovie.png";
+
 
 export {
   iMonitor,
@@ -16,4 +18,5 @@ export {
   trackit,
   foodsearchy,
   grad_pic,
+  uptomovie,
 };

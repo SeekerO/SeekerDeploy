@@ -4,20 +4,23 @@ import { motion } from "framer-motion";
 const Skills = () => {
   const skills_meta_data = [
     { type: "JAVASCRIPT" },
+    { type: "TYPESCRIPT" },
     { type: "JAVA" },
-    { type: "C Sharp" },
+    { type: "C-Sharp" },
     { type: "CSS3" },
     { type: "HTML5" },
-    { type: "REACTJS" },
+    { type: "REACT.JS" },
     { type: "NODE.JS" },
-    { type: "NEXTJS" },
+    { type: "NEXT.JS" },
+    { type: "VITE.JS" },
     { type: "SVELTE" },
     { type: "TAILWIND CSS" },
     { type: "FIGMA" },
     { type: "WORDPRESS" },
     { type: "SUPABASE" },
     { type: "FIREBASE" },
-    { type: "VITE" },
+    { type: "MONGO DB" },
+    { type: "mySQL" },
   ];
 
   return (
