@@ -26,7 +26,7 @@
 }
 
 .side-buttonHeader {
-  @apply  text-[18px] font-semibold textColor cursor-pointer hover:p-3 hover:text-[20px] duration-300 mt-4 px-5;
+  @apply text-[18px] font-semibold textColor cursor-pointer hover:p-3 hover:text-[20px] duration-300 mt-4 px-5;
 }
 
 .grid-container--fit {
@@ -69,4 +69,12 @@
 .contacts-icon:has(.contacts-icon).contacts-icon:not(:hover) {
   scale: 0.8;
   opacity: 0.8;
+}
+
+.skillsContainer {
+  display: grid;
+  margin: 0 auto;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  width: 100%;
 }

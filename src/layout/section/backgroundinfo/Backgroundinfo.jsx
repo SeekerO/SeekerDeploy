@@ -2,29 +2,12 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineDownload } from "react-icons/ai";
 import { grad_pic } from "../../../images/images";
-const Backgroundinfo = ({ home }) => {
-  const [screenSize, SetScreenSize] = useState();
-  const getDeviceType = () => {
-    const width = window.innerWidth;
-    if (width < 640) return "Mobile";
-    else if (width >= 640 && width < 768) return "Tablet";
-    else if (width >= 768 && width < 1024) return "Laptop";
-    else return "Desktop";
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      SetScreenSize(getDeviceType());
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+const Backgroundinfo = () => {
   return (
     <>
-      <div className={` h-screen w-screen  lg:px-40 px-10`}>
+      <div className={`h-screen w-screen  lg:px-40 px-10`}>
         <div
-          className={`flex-col flex  items-center  md:mt-[5rem] mt-[10rem] gap-5 justify-center`}
+          className={`flex-col flex w-full items-center  md:mt-[5rem] mt-[10rem] gap-5 justify-center`}
         >
           <img
             src={grad_pic}
@@ -32,7 +15,7 @@ const Backgroundinfo = ({ home }) => {
           />
 
           <div
-            className={`  md:mt-0 mt-10 flex flex-col textColor items-center `}
+            className={`w-full md:mt-0 mt-10 flex flex-col textColor items-center `}
           >
             <div className="flex md:text-[40px] text-[30px] pr-1 font-bold flex-wrap justify-center gap-x-1">
               Hello!
@@ -40,7 +23,7 @@ const Backgroundinfo = ({ home }) => {
                 I'am John Albert Baisa
               </motion.span>
             </div>
-            <div className="md:text-[25px] text-[20px]  tracking-widest">
+            <div className="md:text-[25px] text-[20px]  tracking-widest text-center w-full">
               A Full-Stack Web Developer
             </div>
             <motion.div
